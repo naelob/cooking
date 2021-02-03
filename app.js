@@ -35,9 +35,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-//change the MONGODB adress between * * to yours if you want to have your own database
+//change the MONGODB adress between to yours if you want to have your own database
 
-mongoose.connect(*your:mongoDB:adress*, {
+mongoose.connect(process.env.MONGODBADRESS, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
